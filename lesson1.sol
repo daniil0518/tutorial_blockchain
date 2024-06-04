@@ -1,13 +1,9 @@
-Result: https://share.cryptozombies.io/en/lesson/1/share/Daniil_Svechenovskyi
-
-Chapters: 1 - 15
-
-```solidity
+/* Result: https://share.cryptozombies.io/en/lesson/1/share/Daniil_Svechenovskyi
+   Chapters: 1 - 15 
+*/
 pragma solidity >=0.5.0 <0.6.0;
-
+ 
 contract ZombieFactory {
-
-    // declare our event here
 
     uint dnaDigits = 16;
     uint dnaModulus = 10 ** dnaDigits;
@@ -21,7 +17,6 @@ contract ZombieFactory {
 
     function _createZombie(string memory _name, uint _dna) private {
         zombies.push(Zombie(_name, _dna));
-        // and fire it here
     }
 
     function _generateRandomDna(string memory _str) private view returns (uint) {
@@ -33,6 +28,4 @@ contract ZombieFactory {
         uint randDna = _generateRandomDna(_name);
         _createZombie(_name, randDna);
     }
-
 }
-```
